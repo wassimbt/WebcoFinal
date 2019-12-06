@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            
+            <meta charset="utf-8">
+            <title>My Home Page</title>
+            <link rel="stylesheet" href="styles.css"> 
+            <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+        </head>
+        <body>
+            
+            <h1> Welcome to CasaArte</h1>
+            <h4 id= "catch_phrase"> A marketplace for art pieces</h4>
+            <span>
+                <p id="countDown"></p>
+            </span>
+                <script> 
+                    var deadline = new Date("Jan 5, 2020 15:37:25").getTime(); 
+                    var x = setInterval(function() { 
+                    var now = new Date().getTime(); 
+                    var t = deadline - now; 
+                    var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+                    var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+                    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+                    var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+                    document.getElementById("countDown").innerHTML = days + " Days, "  
+                    + hours + "hours, " + minutes + "minutes, and " + seconds + "s Before Launch"; 
+                        if (t < 0) { 
+                            clearInterval(x); 
+                            document.getElementById("countDown").innerHTML = "LAUNCH DAY"; 
+                        } 
+                    }, 1000);   
+                </script>
+
+            <nav> 
+                <ul>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                  </ul>
+            </nav>
+
+            <div id="homeHeader"> 
+                <img src="Mondrian.jpg" class="imgsize center" >
+                <div id="paragraphs">
+                    <div id= "description">
+                        <p> CasaArte is a platform connecting local Artists with Art collectioners. 
+                        Lorem ipsum dolor sit amet, nulla error tollit ex sed, pro ex idque facer viderer, 
+                        utroque maiorum accommodare in est. In quo solum ipsum labores, nam ad essent tincidunt, 
+                        aliquip persius postulant has et. Ne cum consul phaedrum, primis epicurei et pro. 
+                        Vim rebum omnesque percipit et. Vel lorem dicunt. 
+                        </p>
+                    </div>
+                    <div>
+                        <p> Three Benefits of using CasaArte: 
+                        <br> - A 
+                            <br>- B 
+                            <br>- C
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="latestPieces"> 
+                <h2><a href="news.html"> Latest Pieces:</a></h2> <!-- Refers to news page-->
+                <p> _______________________________________________________________________________________________________</p>
+
+                <div> 
+                    <p> Empty for now </p>
+                </div>
+            </div>
+
+            <div id= "popularArtists"> 
+                <h2><a href="popularArtists.html"> Most Popular Artists: </a></h2>
+                <p> _______________________________________________________________________________________________________</p>
+
+                <div> 
+                    <p> Empty for now </p>
+                </div>
+            </div>
+
+            <div id="contactUs"> 
+                <h2><a href="contact.html"> Contact Us: </a></h2>
+
+                <div> 
+                    <form action:”/dummy-server”>
+                        <label for="name">
+                            Your name:
+                            <input id=”name” type="text" name="Name" placeholder="Name">
+                        </label>
+                        <p></p>
+                        <label for="email">
+                            Your email:
+                            <input id="email" type="text" name="Email" placeholder="Email">
+                        </label>
+                        <p> </p>
+                        <button type=”submit”>Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </body>
+
+    </html>

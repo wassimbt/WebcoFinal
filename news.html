@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            
+            <meta charset="utf-8">
+            <title>My Home Page</title>
+            <link rel="stylesheet" href="styles.css"> 
+            <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+        </head>
+        <body>
+            
+            <h1> Welcome to CasaArte</h1>
+            <h4 id= "catch_phrase"> A marketplace for art pieces</h4>
+            <span>
+                <p id="countDown"></p>
+            </span>
+                <script> 
+                    var deadline = new Date("Jan 5, 2020 15:37:25").getTime(); 
+                    var x = setInterval(function() { 
+                    var now = new Date().getTime(); 
+                    var t = deadline - now; 
+                    var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+                    var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+                    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+                    var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+                    document.getElementById("countDown").innerHTML ="Coming in "+ days + " Days, "  
+                    + hours + "hours, " + minutes + "minutes, and " + seconds + "s"; 
+                        if (t < 0) { 
+                            clearInterval(x); 
+                            document.getElementById("countDown").innerHTML = "LAUNCH DAY"; 
+                        } 
+                    }, 1000);   
+                </script>
+                <p> No news for now.</p>
+
+
+        </body>
+
+    </html>
